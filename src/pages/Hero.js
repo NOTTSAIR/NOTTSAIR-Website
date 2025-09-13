@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-const Hero = ({ scrollToSection }) => {
+const Hero = () => {
     const [formMessage, setFormMessage] = useState('');
     const [formData, setFormData] = useState({
         name: '',
