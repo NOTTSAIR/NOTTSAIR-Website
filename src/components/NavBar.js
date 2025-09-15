@@ -54,26 +54,18 @@ const NavBar = () => {
                             >
                                 About
                             </Link>
-                            <a
-                                href="#gallery"
+                            <Link
+                                to="/gallery"
                                 className="nav-link"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    scrollToSection('gallery');
-                                }}
                             >
                                 Gallery
-                            </a>
-                            <a
-                                href="#sponsors"
+                            </Link>
+                            <Link
+                                to="/sponsors"
                                 className="nav-link"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    scrollToSection('sponsors');
-                                }}
                             >
                                 Sponsors
-                            </a>
+                            </Link>
                             <a
                                 href="#contact"
                                 className="cta-button"
@@ -133,36 +125,24 @@ const NavBar = () => {
                 </div>
                 {/* Mobile Menu */}
                 <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-                    <a
-                        href="#about"
+                    <Link
+                        to="/about"
                         className="mobile-menu-item"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            scrollToSection('about');
-                        }}
                     >
                         About
-                    </a>
-                    <a
-                        href="#gallery"
-                        className="mobile-menu-item"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            scrollToSection('gallery');
-                        }}
+                    </Link> 
+                    <Link
+                        to="/gallery"
+                        className="mobile-menu-item"                    
                     >
                         Gallery
-                    </a>
-                    <a
-                        href="#sponsors"
+                    </Link>
+                    <Link
+                        to="/sponsors"
                         className="mobile-menu-item"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            scrollToSection('sponsors');
-                        }}
                     >
                         Sponsors
-                    </a>
+                    </Link>
                     <a
                         href="#contact"
                         className="mobile-menu-item"
