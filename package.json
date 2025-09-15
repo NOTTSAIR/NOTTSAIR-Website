@@ -17,13 +17,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" --config ./.prettierrc.json"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
     ]
   },
   "browserslist": {
