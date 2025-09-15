@@ -1,0 +1,1 @@
+export {default as qr} from './images/JU-qr.png';

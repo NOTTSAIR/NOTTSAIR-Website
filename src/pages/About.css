@@ -1,0 +1,122 @@
+/* src/pages/About.css */
+
+/* Hero section on About page */
+#about-hero .section-title {
+    margin-bottom: 16px;
+}
+
+#about-hero .section-subtitle {
+    margin-bottom: 48px;
+}
+
+.about-image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.about-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Teams Section */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.team-info-card {
+    background: #0a192f;
+    border: 1px solid rgba(56, 163, 165, 0.2);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.team-info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(255, 58, 32, 0.15);
+}
+
+.team-info-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.team-info-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #f5fbef;
+}
+
+.team-info-description {
+    font-size: 16px;
+    color: #38a3a5;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Join Us Section */
+.join-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.join-us-text {
+    flex: 2;
+    text-align: left;
+}
+
+.join-us-text .section-title,
+.join-us-text .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.join-us-qr {
+    flex: 1;
+    max-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qr-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .join-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .join-us-text .section-title,
+    .join-us-text .section-subtitle {
+        text-align: center;
+    }
+
+    .join-us-qr {
+        margin-top: 32px;
+    }
+}
