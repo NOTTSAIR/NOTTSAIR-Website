@@ -134,7 +134,7 @@ const NavBar = () => {
                     </Link> */}
                     <a
                         href="#sponsors"
-                        className="nav-link"
+                        className="mobile-menu-item"
                         onClick={(e) => {
                             e.preventDefault();
                             scrollToSection('sponsors');

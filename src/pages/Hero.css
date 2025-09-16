@@ -1,19 +1,20 @@
 .hero {
     min-height: 100vh;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding: 80px 24px 24px;
+    background-image: url('../assets/gallery/6.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://placehold.co/1920x1080/0A192F/38A3A5?text=AI+Racing+Concept');
-    background-size: cover;
-    background-position: center;
     opacity: 0.1;
 }
 
@@ -277,6 +278,9 @@
 }
 
 @media (max-width: 768px) {
+    .hero{
+        margin-top: 15%;
+    }
     .gallery-grid {
         column-count: 2;
     }
@@ -293,7 +297,7 @@
         gap: 12px;
     }
     .sponsor-logo {
-        width: 80px;
-        height: 32px;
+        width: 100%;
+        height: auto;
     }
 }
