@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {yahyaImg, tylerImg, persiaImg, prathuImg} from '../assets';
 import './Hero.css';
 
 const Hero = () => {
@@ -96,39 +97,75 @@ const Hero = () => {
                     <div className="team-grid">
                         <div className="team-card">
                             <img
-                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=Team+Lead"
+                                src={persiaImg}
                                 alt="Team Lead"
                                 className="team-photo"
                             />
-                            <h3 className="team-name">Alex Johnson</h3>
-                            <p className="team-role">Team Lead</p>
+                            <h3 className="team-name">Persia Farzanehnia</h3>
+                            <p className="team-role">Co Lead</p>
                         </div>
                         <div className="team-card">
                             <img
-                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=Software"
+                                src={tylerImg}
                                 alt="Software Lead"
                                 className="team-photo"
                             />
-                            <h3 className="team-name">Ben Carter</h3>
-                            <p className="team-role">Software Lead</p>
+                            <h3 className="team-name">Tyler Channer</h3>
+                            <p className="team-role">Co Lead</p>
                         </div>
                         <div className="team-card">
                             <img
-                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=Hardware"
-                                alt="Hardware Lead"
+                                src={yahyaImg}
+                                alt="Perception Lead"
                                 className="team-photo"
                             />
-                            <h3 className="team-name">Chloe Davis</h3>
-                            <p className="team-role">Hardware Lead</p>
+                            <h3 className="team-name">Yahya Alkhosoussy</h3>
+                            <p className="team-role">Perception Lead</p>
                         </div>
                         <div className="team-card">
                             <img
-                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=Business"
+                                src={prathuImg}
+                                alt="Web-Dev Lead"
+                                className="team-photo"
+                            />
+                            <h3 className="team-name">Prathu</h3>
+                            <p className="team-role">Web-Dev Lead</p>
+                        </div>
+                        <div className="team-card">
+                            <img
+                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=TBD"
+                                alt="Control Lead"
+                                className="team-photo"
+                            />
+                            <h3 className="team-name">TBD</h3>
+                            <p className="team-role">Control Lead</p>
+                        </div>
+                        <div className="team-card">
+                            <img
+                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=TBD"
+                                alt="Path Planning Lead"
+                                className="team-photo"
+                            />
+                            <h3 className="team-name">TBD</h3>
+                            <p className="team-role">Path Planning Lead</p>
+                        </div>
+                        <div className="team-card">
+                            <img
+                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=TBD"
                                 alt="Business Lead"
                                 className="team-photo"
                             />
-                            <h3 className="team-name">Diana Evans</h3>
+                            <h3 className="team-name">TBD</h3>
                             <p className="team-role">Business Lead</p>
+                        </div>
+                        <div className="team-card">
+                            <img
+                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=TBD"
+                                alt="Business Lead"
+                                className="team-photo"
+                            />
+                            <h3 className="team-name">TBD</h3>
+                            <p className="team-role">Social Media Lead</p>
                         </div>
                     </div>
                 </div>
