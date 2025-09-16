@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import yahyaImg from '../assets/images/yahya-alkhosoussy.jpg'
-import tylerImg from '../assets/images/tyler-channer.jpg'
-import persiaImg from '../assets/images/persia-farzanehnia.jpg'
-import prathuImg from '../assets/images/prathu.jpg'
+import {yahyaImg, tylerImg, persiaImg, prathuImg} from '../assets';
 import './Hero.css';
 
 const Hero = () => {
@@ -127,6 +124,15 @@ const Hero = () => {
                         </div>
                         <div className="team-card">
                             <img
+                                src={prathuImg}
+                                alt="Web-Dev Lead"
+                                className="team-photo"
+                            />
+                            <h3 className="team-name">Prathu</h3>
+                            <p className="team-role">Web-Dev Lead</p>
+                        </div>
+                        <div className="team-card">
+                            <img
                                 src="https://placehold.co/200x200/F5FBEF/0A192F?text=TBD"
                                 alt="Control Lead"
                                 className="team-photo"
@@ -142,15 +148,6 @@ const Hero = () => {
                             />
                             <h3 className="team-name">TBD</h3>
                             <p className="team-role">Path Planning Lead</p>
-                        </div>
-                        <div className="team-card">
-                            <img
-                                src={prathuImg}
-                                alt="Web-Dev Lead"
-                                className="team-photo"
-                            />
-                            <h3 className="team-name">Prathu</h3>
-                            <p className="team-role">Web-Dev Lead</p>
                         </div>
                         <div className="team-card">
                             <img
