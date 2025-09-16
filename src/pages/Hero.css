@@ -272,8 +272,8 @@
         gap: 20px;
     }
     .sponsor-logo {
-        width: 120px;
-        height: 48px;
+        width: 100%;
+        height: auto;
     }
 }
 
