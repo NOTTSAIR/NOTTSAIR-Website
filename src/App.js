@@ -26,7 +26,19 @@ const ScrollToTop = () => {
 function App() {
     useEffect(() => {
         [
-            assets.Gallery1, assets.Gallery2, assets.Gallery3, assets.Gallery4, assets.Gallery5, assets.Gallery6, assets.Gallery7, assets.Gallery8, assets.Gallery9, assets.Gallery10, assets.Gallery11, assets.Gallery12, assets.Gallery13
+            assets.Gallery1,
+            assets.Gallery2,
+            assets.Gallery3,
+            assets.Gallery4,
+            assets.Gallery5,
+            assets.Gallery6,
+            assets.Gallery7,
+            assets.Gallery8,
+            assets.Gallery9,
+            assets.Gallery10,
+            assets.Gallery11,
+            assets.Gallery12,
+            assets.Gallery13,
         ].forEach((src) => {
             const img = new window.Image();
             img.src = src;

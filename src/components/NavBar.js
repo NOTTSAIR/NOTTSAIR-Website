@@ -41,7 +41,11 @@ const NavBar = () => {
             <header className={`header ${headerShadow ? 'shadow' : ''}`}>
                 <div className="container">
                     <div className="header-content">
-                        <NavLink to="/" className="logo" onClick={() => setMobileMenuOpen(false)}>
+                        <NavLink
+                            to="/"
+                            className="logo"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
                             NOTTS<span className="gradient-text">AiR</span>
                         </NavLink>
                         <nav className="nav">

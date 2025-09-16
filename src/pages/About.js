@@ -105,7 +105,10 @@ const About = () => {
                             />
                             <h3 className="team-info-title">WebDev</h3>
                             <p className="team-info-description">
-                                The WebDev team designs, develops, and maintains our digital presence, ensuring our website is modern, informative, and accessible to all supporters and team members.
+                                The WebDev team designs, develops, and maintains
+                                our digital presence, ensuring our website is
+                                modern, informative, and accessible to all
+                                supporters and team members.
                             </p>
                         </div>
                         <div className="team-info-card">
@@ -116,7 +119,10 @@ const About = () => {
                             />
                             <h3 className="team-info-title">Social Media</h3>
                             <p className="team-info-description">
-                                The Social Media team shares our journey, achievements, and events with the world, engaging our audience and growing our community across platforms.
+                                The Social Media team shares our journey,
+                                achievements, and events with the world,
+                                engaging our audience and growing our community
+                                across platforms.
                             </p>
                         </div>
                     </div>

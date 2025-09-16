@@ -282,12 +282,11 @@ const Hero = () => {
                         Get in <span className="gradient-text">Touch</span>
                     </h2>
                     <p className="section-subtitle">
-                        Have questions, interested in
-                        sponsoring us? We'd love to hear from you. Reach out
-                        through the form below or connect with us on social
-                        media.
+                        Have questions, interested in sponsoring us? We'd love
+                        to hear from you. Reach out through the form below or
+                        connect with us on social media.
                     </p>
-                    <p className='section-subtitle'>[SPONSORS ONLY]</p>
+                    <p className="section-subtitle">[SPONSORS ONLY]</p>
 
                     {/* Microsoft Forms Embed Example
                     <div className="contact-form-iframe" style={{ marginBottom: '2rem' }}>
