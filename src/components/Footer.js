@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-content">
                     <span className="footer-text">
-                        &copy; 2024 NottsAir Formula Student AI. All Rights
+                        &copy; 2025 NottsAir Formula Student AI. All Rights
                         Reserved.
                     </span>
                     <div className="social-links">

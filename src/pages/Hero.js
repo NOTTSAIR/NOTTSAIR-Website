@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {yahyaImg, tylerImg, persiaImg, prathuImg} from '../assets';
+import * as assets from '../assets';
 import './Hero.css';
 
 const Hero = () => {
@@ -9,6 +9,36 @@ const Hero = () => {
         email: '',
         message: '',
     });
+
+    const galleryImages = [
+        assets.Gallery1,
+        assets.Gallery2,
+        assets.Gallery3,
+        assets.Gallery4,
+        assets.Gallery5,
+        assets.Gallery6,
+        assets.Gallery7,
+        assets.Gallery8,
+        assets.Gallery9,
+        assets.Gallery10,
+        assets.Gallery11,
+        assets.Gallery12,
+        assets.Gallery13,
+    ];
+    function shuffle(array) {
+        let currentIndex = array.length,
+            randomIndex;
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex],
+                array[currentIndex],
+            ];
+        }
+        return array;
+    }
+    const shuffledGallery = shuffle([...galleryImages]);
 
     const handleFormSubmit = () => {
         if (formData.name && formData.email && formData.message) {
@@ -97,7 +127,7 @@ const Hero = () => {
                     <div className="team-grid">
                         <div className="team-card">
                             <img
-                                src={persiaImg}
+                                src={assets.ColeadImg2}
                                 alt="Team Lead"
                                 className="team-photo"
                             />
@@ -106,7 +136,7 @@ const Hero = () => {
                         </div>
                         <div className="team-card">
                             <img
-                                src={tylerImg}
+                                src={assets.ColeadImg1}
                                 alt="Software Lead"
                                 className="team-photo"
                             />
@@ -115,7 +145,7 @@ const Hero = () => {
                         </div>
                         <div className="team-card">
                             <img
-                                src={yahyaImg}
+                                src={assets.PerLeadImg}
                                 alt="Perception Lead"
                                 className="team-photo"
                             />
@@ -124,7 +154,7 @@ const Hero = () => {
                         </div>
                         <div className="team-card">
                             <img
-                                src={prathuImg}
+                                src={assets.WebLeadImg}
                                 alt="Web-Dev Lead"
                                 className="team-photo"
                             />
@@ -186,54 +216,14 @@ const Hero = () => {
                     </p>
 
                     <div className="gallery-grid">
-                        <div className="gallery-column">
+                        {shuffledGallery.map((img, i) => (
                             <img
                                 className="gallery-image"
-                                src="https://placehold.co/500x800/0A192F/38A3A5?text=NA-01+Car"
-                                alt="NottsAir Car"
+                                src={img}
+                                alt={`Gallery ${i + 1}`}
+                                key={img}
                             />
-                            <img
-                                className="gallery-image"
-                                src="https://placehold.co/500x600/0A192F/38A3A5?text=CAD+Design"
-                                alt="CAD Design"
-                            />
-                        </div>
-                        <div className="gallery-column">
-                            <img
-                                className="gallery-image"
-                                src="https://placehold.co/500x600/0A192F/38A3A5?text=Team+Working"
-                                alt="Team working on car"
-                            />
-                            <img
-                                className="gallery-image"
-                                src="https://placehold.co/500x800/0A192F/38A3A5?text=Track+Day"
-                                alt="Car on track"
-                            />
-                        </div>
-                        <div className="gallery-column">
-                            <img
-                                className="gallery-image"
-                                src="https://placehold.co/500x800/0A192F/38A3A5?text=Sensors"
-                                alt="Sensor technology"
-                            />
-                            <img
-                                className="gallery-image"
-                                src="https://placehold.co/500x600/0A192F/38A3A5?text=Electronics"
-                                alt="Electronics work"
-                            />
-                        </div>
-                        <div className="gallery-column">
-                            <img
-                                className="gallery-image"
-                                src="https://placehold.co/500x600/0A192F/38A3A5?text=Competition"
-                                alt="Competition day"
-                            />
-                            <img
-                                className="gallery-image"
-                                src="https://placehold.co/500x800/0A192F/38A3A5?text=Podium+Finish"
-                                alt="Team celebrating"
-                            />
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -257,16 +247,16 @@ const Hero = () => {
 
                     <div className="sponsors-grid">
                         <img
-                            src="https://placehold.co/200x100/F5FBEF/0A192F?text=Sponsor+A"
-                            alt="Sponsor Logo 1"
+                            src={assets.UoNSP}
+                            alt="University of Nottingham"
                             className="sponsor-logo"
                         />
                         <img
-                            src="https://placehold.co/200x100/F5FBEF/0A192F?text=Sponsor+B"
-                            alt="Sponsor Logo 2"
+                            src={assets.cascade}
+                            alt="UoN Cascade Fund"
                             className="sponsor-logo"
                         />
-                        <img
+                        {/* <img
                             src="https://placehold.co/200x100/F5FBEF/0A192F?text=Sponsor+C"
                             alt="Sponsor Logo 3"
                             className="sponsor-logo"
@@ -280,7 +270,7 @@ const Hero = () => {
                             src="https://placehold.co/200x100/F5FBEF/0A192F?text=Sponsor+E"
                             alt="Sponsor Logo 5"
                             className="sponsor-logo"
-                        />
+                        /> */}
                     </div>
                 </div>
             </section>

@@ -41,31 +41,29 @@ const NavBar = () => {
             <header className={`header ${headerShadow ? 'shadow' : ''}`}>
                 <div className="container">
                     <div className="header-content">
-                        <NavLink
-                            to="/"
-                            className="logo"
-                        >
+                        <NavLink to="/" className="logo">
                             NOTTS<span className="gradient-text">AiR</span>
                         </NavLink>
                         <nav className="nav">
-                            <Link
-                                to="/about"
-                                className="nav-link"
-                            >
+                            <Link to="/about" className="nav-link">
                                 About
                             </Link>
-                            <Link
-                                to="/gallery"
-                                className="nav-link"
-                            >
+                            <Link to="/gallery" className="nav-link">
                                 Gallery
                             </Link>
-                            <Link
-                                to="/sponsors"
+                            {/* <Link to="/sponsors" className="nav-link">
+                                Sponsors
+                            </Link> */}
+                            <a
+                                href="#sponsors"
                                 className="nav-link"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    scrollToSection('sponsors');
+                                }}
                             >
                                 Sponsors
-                            </Link>
+                            </a>
                             <a
                                 href="#contact"
                                 className="cta-button"
@@ -125,24 +123,25 @@ const NavBar = () => {
                 </div>
                 {/* Mobile Menu */}
                 <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-                    <Link
-                        to="/about"
-                        className="mobile-menu-item"
-                    >
+                    <Link to="/about" className="mobile-menu-item">
                         About
-                    </Link> 
-                    <Link
-                        to="/gallery"
-                        className="mobile-menu-item"                    
-                    >
+                    </Link>
+                    <Link to="/gallery" className="mobile-menu-item">
                         Gallery
                     </Link>
-                    <Link
-                        to="/sponsors"
-                        className="mobile-menu-item"
+                    {/* <Link to="/sponsors" className="mobile-menu-item">
+                        Sponsors
+                    </Link> */}
+                    <a
+                        href="#sponsors"
+                        className="nav-link"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            scrollToSection('sponsors');
+                        }}
                     >
                         Sponsors
-                    </Link>
+                    </a>
                     <a
                         href="#contact"
                         className="mobile-menu-item"
