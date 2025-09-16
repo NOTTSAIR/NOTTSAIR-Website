@@ -282,12 +282,29 @@ const Hero = () => {
                         Get in <span className="gradient-text">Touch</span>
                     </h2>
                     <p className="section-subtitle">
-                        Have questions, want to join the team, or interested in
+                        Have questions, interested in
                         sponsoring us? We'd love to hear from you. Reach out
                         through the form below or connect with us on social
                         media.
                     </p>
+                    <p className='section-subtitle'>[SPONSORS ONLY]</p>
 
+                    {/* Microsoft Forms Embed Example
+                    <div className="contact-form-iframe" style={{ marginBottom: '2rem' }}>
+                        <iframe
+                            title="Contact Microsoft Form"
+                            src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID_HERE"
+                            width="100%"
+                            height="600"
+                            frameBorder="0"
+                            marginHeight="0"
+                            marginWidth="0"
+                            style={{ border: '1px solid #ccc', borderRadius: '8px' }}
+                            allowFullScreen
+                        ></iframe>
+                    </div> */}
+
+                    {/* Existing custom form below (optional, can remove if only iframe is needed) */}
                     <div className="contact-form">
                         <div className="form-group">
                             <label htmlFor="name" className="form-label">
