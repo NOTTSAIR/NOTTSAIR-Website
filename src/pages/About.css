@@ -79,9 +79,16 @@
     gap: 64px;
 }
 
+
 .join-us-text {
     flex: 2;
     text-align: left;
+}
+
+.join-us-text .hero-button {
+    display: block;
+    margin: 32px auto 0 auto;
+    text-align: center;
 }
 
 .join-us-text .section-title,
@@ -118,5 +125,8 @@
 
     .join-us-qr {
         margin-top: 32px;
+    }
+    .join-us-text .hero-button {
+        margin: 32px auto 0 auto;
     }
 }

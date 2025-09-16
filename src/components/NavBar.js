@@ -41,7 +41,7 @@ const NavBar = () => {
             <header className={`header ${headerShadow ? 'shadow' : ''}`}>
                 <div className="container">
                     <div className="header-content">
-                        <NavLink to="/" className="logo">
+                        <NavLink to="/" className="logo" onClick={() => setMobileMenuOpen(false)}>
                             NOTTS<span className="gradient-text">AiR</span>
                         </NavLink>
                         <nav className="nav">
@@ -123,10 +123,18 @@ const NavBar = () => {
                 </div>
                 {/* Mobile Menu */}
                 <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-                    <Link to="/about" className="mobile-menu-item">
+                    <Link
+                        to="/about"
+                        className="mobile-menu-item"
+                        onClick={() => setMobileMenuOpen(false)}
+                    >
                         About
                     </Link>
-                    <Link to="/gallery" className="mobile-menu-item">
+                    <Link
+                        to="/gallery"
+                        className="mobile-menu-item"
+                        onClick={() => setMobileMenuOpen(false)}
+                    >
                         Gallery
                     </Link>
                     {/* <Link to="/sponsors" className="mobile-menu-item">
@@ -137,6 +145,7 @@ const NavBar = () => {
                         className="mobile-menu-item"
                         onClick={(e) => {
                             e.preventDefault();
+                            setMobileMenuOpen(false);
                             scrollToSection('sponsors');
                         }}
                     >
@@ -147,6 +156,7 @@ const NavBar = () => {
                         className="mobile-menu-item"
                         onClick={(e) => {
                             e.preventDefault();
+                            setMobileMenuOpen(false);
                             scrollToSection('contact');
                         }}
                     >

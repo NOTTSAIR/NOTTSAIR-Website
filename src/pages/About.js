@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 import { qr, Gallery1 } from '../assets';
+import * as assets from '../assets';
 
 const About = () => {
     return (
@@ -42,7 +43,7 @@ const About = () => {
                     <div className="teams-grid">
                         <div className="team-info-card">
                             <img
-                                src="https://placehold.co/400x300/0A192F/38A3A5?text=Perception"
+                                src={assets.perGif}
                                 alt="Perception Team"
                                 className="team-info-image"
                             />
@@ -56,7 +57,7 @@ const About = () => {
                         </div>
                         <div className="team-info-card">
                             <img
-                                src="https://placehold.co/400x300/0A192F/38A3A5?text=Path+Planning"
+                                src={assets.pathPlanningGif}
                                 alt="Path Planning Team"
                                 className="team-info-image"
                             />
@@ -70,7 +71,7 @@ const About = () => {
                         </div>
                         <div className="team-info-card">
                             <img
-                                src="https://placehold.co/400x300/0A192F/38A3A5?text=Control"
+                                src={assets.controlGif}
                                 alt="Control Team"
                                 className="team-info-image"
                             />
@@ -84,7 +85,7 @@ const About = () => {
                         </div>
                         <div className="team-info-card">
                             <img
-                                src="https://placehold.co/400x300/0A192F/38A3A5?text=Business"
+                                src={assets.bussGif}
                                 alt="Business Team"
                                 className="team-info-image"
                             />
@@ -94,6 +95,28 @@ const About = () => {
                                 marketing, and outreach — securing partnerships,
                                 managing finances, and promoting the team’s
                                 mission and successes.
+                            </p>
+                        </div>
+                        <div className="team-info-card">
+                            <img
+                                src={assets.webGif}
+                                alt="WebDev Team"
+                                className="team-info-image"
+                            />
+                            <h3 className="team-info-title">WebDev</h3>
+                            <p className="team-info-description">
+                                The WebDev team designs, develops, and maintains our digital presence, ensuring our website is modern, informative, and accessible to all supporters and team members.
+                            </p>
+                        </div>
+                        <div className="team-info-card">
+                            <img
+                                src={assets.socialGif}
+                                alt="Social Media Team"
+                                className="team-info-image"
+                            />
+                            <h3 className="team-info-title">Social Media</h3>
+                            <p className="team-info-description">
+                                The Social Media team shares our journey, achievements, and events with the world, engaging our audience and growing our community across platforms.
                             </p>
                         </div>
                     </div>

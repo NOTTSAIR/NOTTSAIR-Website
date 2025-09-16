@@ -5,6 +5,12 @@ export { default as ColeadImg2 } from './images/persia-farzanehnia.jpg';
 export { default as WebLeadImg } from './images/prathu.jpg';
 export { default as UoNSP } from './images/UoNLogo.png';
 export { default as cascade } from './images/uoncascadefund.png';
+export { default as perGif } from './images/perGif.gif';
+export { default as pathPlanningGif } from './images/pathPlanningGIF.gif';
+export { default as controlGif } from './images/controlGif.gif';
+export { default as webGif } from './images/webGif.gif';
+export { default as bussGif} from './images/businessGif.gif';
+export { default as socialGif} from './images/socialGif.gif';
 
 // Gallery exports
 export { default as Gallery1 } from './gallery/1.jpg';
