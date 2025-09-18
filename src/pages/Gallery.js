@@ -23,19 +23,29 @@ const Gallery = () => {
                 <h2 className="section-title">Achievements</h2>
                 <div className="achievements-text">
                     <p className="section-subtitle">
-                        It’s our very first year competing in the Formula
-                        Student AI competition — and we’re going big.
+                        2025 was our very first year competing in Formula Student AI at Silverstone, 
+                        representing the University of Nottingham on the international stage.
                     </p>
+
                     <p className="section-subtitle">
-                        AIRNotts brings together passionate students from
-                        diverse cultural and academic backgrounds, united by a
-                        love for motorsport, AI, and cutting-edge technology.
+                        We successfully passed all static inspections and achieved the following results:
                     </p>
+
+                    <div className="section-subtitle results-list">
+                        <p>Design: 15th place with a score of 107.1</p>
+                        <p>Simulation Development: 16th place with a score of 39.8</p>
+                        <p>Real World AI: 19th place with a score of 51.8</p>
+                        <p>Presentation: 22nd place with a score of 54.8</p>
+                        <p>Overall Statics: 20th place with a score of 253.5</p>
+                    </div>
+
                     <p className="section-subtitle">
-                        We’re building an F1-style autonomous racecar and will
-                        be taking it to the legendary Silverstone Racetrack — a
-                        truly exhilarating challenge at the forefront of
-                        automotive engineering!
+                        These achievements mark an excellent foundation for a debut season against established teams worldwide.
+                    </p>
+
+                    <p className="section-subtitle">
+                        With our first competition complete, the team is now focused on getting the car running on track in 2026, 
+                        bringing together our work in perception, planning and control to achieve fully autonomous racing at Silverstone.
                     </p>
                 </div>
             </div>
