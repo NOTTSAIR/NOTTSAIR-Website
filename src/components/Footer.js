@@ -12,8 +12,10 @@ const Footer = () => {
                     </span>
                     <div className="social-links">
                         <a
-                            href="https://www.instagram.com/airnotts/"
+                            href="https://www.instagram.com/nottsair/"
                             className="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
                         >
                             <svg
                                 className="social-icon"
@@ -26,6 +28,8 @@ const Footer = () => {
                         <a
                             href="https://www.linkedin.com/company/airnotts/"
                             className="social-link"
+                            rel="noopener noreferrer"
+                            target="_blank"
                         >
                             <svg
                                 className="social-icon"
