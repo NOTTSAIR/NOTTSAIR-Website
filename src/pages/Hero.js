@@ -303,8 +303,15 @@ const Hero = () => {
                         ></iframe>
                     </div> */}
 
+                    <a
+                        className="form-submit"
+                        href="mailto:admin@airnotts.com"
+                    >
+                        Email us : admin@airnotts.com
+                    </a>
+
                     {/* Existing custom form below (optional, can remove if only iframe is needed) */}
-                    <div className="contact-form">
+                    {/* <div className="contact-form">
                         <div className="form-group">
                             <label htmlFor="name" className="form-label">
                                 Your Name
@@ -356,7 +363,7 @@ const Hero = () => {
                     </div>
                     {formMessage && (
                         <div className="form-message">{formMessage}</div>
-                    )}
+                    )} */}
                 </div>
             </section>
         </main>
