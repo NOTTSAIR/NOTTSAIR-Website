@@ -23,8 +23,8 @@
     inset: 0;
     background: linear-gradient(
         to top,
-        #0a192f,
-        rgba(10, 25, 47, 0.8),
+        var(--bg-primary),
+        var(--header-background),
         transparent
     );
 }
@@ -45,7 +45,7 @@
 
 .hero-subtitle {
     font-size: clamp(1.125rem, 3vw, 1.5rem);
-    color: #38a3a5;
+    color: var(--color-secondary);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -68,12 +68,12 @@
 }
 
 .hero-button.primary {
-    background: linear-gradient(90deg, #ff101f, #ff3a20);
+    background: linear-gradient(90deg, var(--dark-red), var(--red));
     color: white;
 }
 
 .hero-button.secondary {
-    background: #38a3a5;
+    background: var(--color-secondary);
     color: white;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .section.alt {
-    background: #112240;
+    background: var(--bg-third);
 }
 
 .section-title {
@@ -101,7 +101,7 @@
 .section-subtitle {
     font-size: 18px;
     text-align: center;
-    color: #38a3a5;
+    color: var(--color-secondary);
     max-width: 768px;
     margin: 0 auto 48px auto;
 }
@@ -114,7 +114,7 @@
 }
 
 .team-card {
-    background: #112240;
+    background: var(--bg-third);
     padding: 24px;
     border-radius: 8px;
     text-align: center;
@@ -125,7 +125,7 @@
 
 .team-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 25px 50px -12px rgba(255, 58, 32, 0.1);
+    box-shadow: 0 25px 50px -12px var(--card-hover);
 }
 
 .team-photo {
@@ -133,7 +133,7 @@
     height: 128px;
     border-radius: 50%;
     margin: 0 auto 16px auto;
-    border: 4px solid #38a3a5;
+    border: 4px solid var(--color-secondary);
     display: block;
 }
 
@@ -144,7 +144,7 @@
 }
 
 .team-role {
-    color: #38a3a5;
+    color: var(--color-secondary);
 }
 
 /* Gallery Grid */
@@ -193,7 +193,7 @@
     opacity: 0.85;
     transition: opacity 0.3s ease;
     display: block;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px #0000000a; /*is this meant to be black?*/
 }
 
 .sponsor-logo:hover {
@@ -215,13 +215,13 @@
     margin-bottom: 8px;
     font-size: 14px;
     font-weight: 500;
-    color: #38a3a5;
+    color: var(--color-secondary);
 }
 
 .form-input,
 .form-textarea {
-    background: #0a192f;
-    border: 1px solid rgba(56, 163, 165, 0.5);
+    background: var(--bg-primary);
+    border: 1px solid var(--color-secondary);
     color: white;
     font-size: 14px;
     border-radius: 8px;
@@ -233,8 +233,8 @@
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: #ff101f;
-    box-shadow: 0 0 0 2px rgba(255, 16, 31, 0.2);
+    border-color: var(--dark-red);
+    box-shadow: 0 0 0 2px var(--card-hover);
 }
 
 .form-textarea {
@@ -250,7 +250,7 @@
     font-weight: 500;
     text-align: center;
     color: white;
-    background: linear-gradient(90deg, #ff101f, #ff3a20);
+    background: linear-gradient(90deg, var(--dark-red), var(--red));
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -264,7 +264,7 @@
 .form-message {
     margin-top: 16px;
     text-align: center;
-    color: #10b981;
+    color: var(--form-color);
 }
 
 /* Responsive Design */
