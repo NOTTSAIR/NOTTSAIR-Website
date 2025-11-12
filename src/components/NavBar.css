@@ -1,16 +1,18 @@
+
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(10, 25, 47, 0.8);
+    background: --header-background;
     backdrop-filter: blur(16px);
     transition: all 0.3s ease;
 }
 
 .header.shadow {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 25px 50px -12px var(--shadow);
 }
 
 .header-content {
@@ -24,12 +26,12 @@
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
-    color: #f5fbef;
+    color: var(--bg-secondary);
     letter-spacing: -0.025em;
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #ff101f, #ff3a20);
+    background: linear-gradient(90deg, var(--dark-red), var(--red)); /*not sure if i should change this*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -43,18 +45,18 @@
 
 .nav-link {
     text-decoration: none;
-    color: #f5fbef;
+    color: var(--bg-secondary);
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #38a3a5;
+    color: var(--color-secondary);
 }
 
 .cta-button {
     padding: 8px 16px;
     border-radius: 6px;
-    background: linear-gradient(90deg, #ff101f, #ff3a20);
+    background: linear-gradient(90deg, var(--dark-red), var(--red));
     color: white;
     font-weight: 600;
     text-decoration: none;
@@ -69,7 +71,7 @@
     display: none;
     background: none;
     border: none;
-    color: #f5fbef;
+    color: var(--bg-secondary);
     cursor: pointer;
     z-index: 1001;
 }
@@ -80,8 +82,8 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: #0a192f;
-    border-top: 1px solid #374151;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-primary);
 }
 
 .mobile-menu.open {
@@ -92,13 +94,13 @@
     display: block;
     text-align: center;
     padding: 12px 24px;
-    color: #f5fbef;
+    color: var(--bg-secondary);
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .mobile-menu-item:hover {
-    background-color: #1f2937;
+    background-color: var(--mobile-hover);
 }
 
 @media (max-width: 768px) {
