@@ -1,4 +1,4 @@
-
+/* src/pages/About.css */
 
 /* Hero section on About page */
 #about-hero .section-title {
@@ -15,7 +15,7 @@
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 20px 40px var(--shadow);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     margin-bottom: 10%;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .team-info-card {
-    background: var(--bg-primary);
-    border: 1px solid var(--border-primary);
+    background: #0a192f;
+    border: 1px solid rgba(56, 163, 165, 0.2);
     border-radius: 12px;
     padding: 32px;
     display: flex;
@@ -47,7 +47,7 @@
 
 .team-info-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px var(--card-hover);
+    box-shadow: 0 25px 50px -12px rgba(255, 58, 32, 0.15);
 }
 
 .team-info-image {
@@ -62,12 +62,12 @@
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 12px;
-    color: var(--bg-secondary);
+    color: #f5fbef;
 }
 
 .team-info-description {
     font-size: 16px;
-    color: var(--color-secondary);
+    color: #38a3a5;
     line-height: 1.6;
     flex-grow: 1;
 }

@@ -23,8 +23,8 @@
     inset: 0;
     background: linear-gradient(
         to top,
-        var(--bg-primary),
-        var(--header-background),
+        #0a192f,
+        rgba(10, 25, 47, 0.8),
         transparent
     );
 }
@@ -45,7 +45,7 @@
 
 .hero-subtitle {
     font-size: clamp(1.125rem, 3vw, 1.5rem);
-    color: var(--color-secondary);
+    color: #38a3a5;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -68,12 +68,12 @@
 }
 
 .hero-button.primary {
-    background: linear-gradient(90deg, var(--dark-red), var(--red));
+    background: linear-gradient(90deg, #ff101f, #ff3a20);
     color: white;
 }
 
 .hero-button.secondary {
-    background: var(--color-secondary);
+    background: #38a3a5;
     color: white;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .section.alt {
-    background: var(--bg-third);
+    background: #112240;
 }
 
 .section-title {
@@ -101,7 +101,7 @@
 .section-subtitle {
     font-size: 18px;
     text-align: center;
-    color: var(--color-secondary);
+    color: #38a3a5;
     max-width: 768px;
     margin: 0 auto 48px auto;
 }
@@ -114,7 +114,7 @@
 }
 
 .team-card {
-    background: var(--bg-third);
+    background: #112240;
     padding: 24px;
     border-radius: 8px;
     text-align: center;
@@ -125,7 +125,7 @@
 
 .team-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 25px 50px -12px var(--card-hover);
+    box-shadow: 0 25px 50px -12px rgba(255, 58, 32, 0.1);
 }
 
 .team-photo {
@@ -133,7 +133,7 @@
     height: 128px;
     border-radius: 50%;
     margin: 0 auto 16px auto;
-    border: 4px solid var(--color-secondary);
+    border: 4px solid #38a3a5;
     display: block;
 }
 
@@ -144,7 +144,7 @@
 }
 
 .team-role {
-    color: var(--color-secondary);
+    color: #38a3a5;
 }
 
 /* Gallery Grid */
@@ -193,7 +193,7 @@
     opacity: 0.85;
     transition: opacity 0.3s ease;
     display: block;
-    box-shadow: 0 2px 8px black; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .sponsor-logo:hover {
@@ -215,13 +215,13 @@
     margin-bottom: 8px;
     font-size: 14px;
     font-weight: 500;
-    color: var(--color-secondary);
+    color: #38a3a5;
 }
 
 .form-input,
 .form-textarea {
-    background: var(--bg-primary);
-    border: 1px solid var(--color-secondary);
+    background: #0a192f;
+    border: 1px solid rgba(56, 163, 165, 0.5);
     color: white;
     font-size: 14px;
     border-radius: 8px;
@@ -233,8 +233,8 @@
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--dark-red);
-    box-shadow: 0 0 0 2px var(--card-hover);
+    border-color: #ff101f;
+    box-shadow: 0 0 0 2px rgba(255, 16, 31, 0.2);
 }
 
 .form-textarea {
@@ -250,7 +250,7 @@
     font-weight: 500;
     text-align: center;
     color: white;
-    background: linear-gradient(90deg, var(--dark-red), var(--red));
+    background: linear-gradient(90deg, #ff101f, #ff3a20);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -264,7 +264,7 @@
 .form-message {
     margin-top: 16px;
     text-align: center;
-    color: var(--form-color);
+    color: #10b981;
 }
 
 /* Responsive Design */
