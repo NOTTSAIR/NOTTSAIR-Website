@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as assets from '../assets';
 import './Hero.css';
 
 const Hero = () => {
-    const [formMessage, setFormMessage] = useState('');
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
+    // const [formMessage, setFormMessage] = useState('');
+    // const [formData, setFormData] = useState({
+    //     name: '',
+    //     email: '',
+    //     message: '',
+    // });
 
     const galleryImages = [
         assets.Gallery1,
@@ -40,16 +40,16 @@ const Hero = () => {
     }
     const shuffledGallery = shuffle([...galleryImages]);
 
-    const handleFormSubmit = () => {
-        if (formData.name && formData.email && formData.message) {
-            setFormMessage('Thank you! Your message has been sent.');
-            setFormData({ name: '', email: '', message: '' });
-            setTimeout(() => setFormMessage(''), 5000);
-        } else {
-            setFormMessage('Please fill in all fields.');
-            setTimeout(() => setFormMessage(''), 3000);
-        }
-    };
+    // const handleFormSubmit = () => {
+    //     if (formData.name && formData.email && formData.message) {
+    //         setFormMessage('Thank you! Your message has been sent.');
+    //         setFormData({ name: '', email: '', message: '' });
+    //         setTimeout(() => setFormMessage(''), 5000);
+    //     } else {
+    //         setFormMessage('Please fill in all fields.');
+    //         setTimeout(() => setFormMessage(''), 3000);
+    //     }
+    // };
 
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
@@ -58,12 +58,12 @@ const Hero = () => {
         }
     };
 
-    const handleInputChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    };
+    // const handleInputChange = (e) => {
+    //     setFormData({
+    //         ...formData,
+    //         [e.target.name]: e.target.value,
+    //     });
+    // };
 
     return (
         <main>
@@ -303,10 +303,7 @@ const Hero = () => {
                         ></iframe>
                     </div> */}
 
-                    <a
-                        className="form-submit"
-                        href="mailto:admin@airnotts.com"
-                    >
+                    <a className="form-submit" href="mailto:admin@airnotts.com">
                         Email us : admin@airnotts.com
                     </a>
 
