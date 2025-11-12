@@ -1,6 +1,8 @@
+
+
 .footer {
-    background: #0a192f;
-    border-top: 1px solid #374151;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-primary);
 }
 
 .footer-content {
@@ -13,7 +15,7 @@
 }
 
 .footer-text {
-    color: #9ca3af;
+    color: var(--text-primary); 
 }
 
 .social-links {
@@ -22,7 +24,7 @@
 }
 
 .social-link {
-    color: #9ca3af;
+    color: var(--text-primary);
     transition: color 0.3s ease;
 }
 

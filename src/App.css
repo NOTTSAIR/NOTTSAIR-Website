@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +12,8 @@ body {
         -apple-system,
         BlinkMacSystemFont,
         sans-serif;
-    background-color: #0a192f;
-    color: #f5fbef;
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary);
     line-height: 1.6;
     scroll-behavior: smooth;
 }
