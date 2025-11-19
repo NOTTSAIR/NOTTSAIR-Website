@@ -43,14 +43,17 @@
     gap: 32px;
 }
 
+
+
 .nav-link {
     text-decoration: none;
     color: var(--bg-secondary);
     transition: color 0.3s ease;
-    font-family: 'Roboto Flex', sans-serif;
-    display: flex;
+    font-family: 'Roboto Flex', sans-serif; 
+    display: flex; 
     align-items: center;
 }
+
 
 .nav-link:hover {
     color: var(--color-secondary);
@@ -69,6 +72,11 @@
 .cta-button:hover {
     opacity: 0.9;
 }
+
+
+
+
+
 
 .mobile-menu-btn {
     display: none;
