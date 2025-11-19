@@ -1,6 +1,103 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import {motion} from 'framer-motion';
+
 import './NavBar.css';
+const VariableProximity = ({
+  label,
+  fromFontVariationSettings = "'wght' 400, 'opsz' 9",
+  toFontVariationSettings = "'wght' 900, 'opsz' 40",
+  radius = 100,
+  falloff = 'linear',
+  className = '',
+  onClick,
+}) => {
+  const containerRef = useRef(null);
+  const letterRefs = useRef([]);
+  const [interpolatedSettings, setInterpolatedSettings] = useState([]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const parseSettings = (settingsStr) => {
+      return new Map(
+        settingsStr.split(',').map((s) => {
+          const [name, value] = s.trim().split(' ');
+          return [name.replace(/['"]/g, ''), parseFloat(value)];
+        })
+      );
+    };
+
+    const fromSettings = parseSettings(fromFontVariationSettings);
+    const toSettings = parseSettings(toFontVariationSettings);
+
+    const handleMouseMove = (e) => {
+      if (!container) return;
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      const newSettings = letterRefs.current.map((letterRef) => {
+        if (!letterRef) return fromFontVariationSettings;
+
+        const letterRect = letterRef.getBoundingClientRect();
+        const letterCenterX = letterRect.left + letterRect.width / 2;
+        const letterCenterY = letterRect.top + letterRect.height / 2;
+
+        const distance = Math.sqrt(
+          Math.pow(mouseX - letterCenterX, 2) + Math.pow(mouseY - letterCenterY, 2)
+        );
+
+        if (distance >= radius) return fromFontVariationSettings;
+
+        let progress = 1 - distance / radius;
+        
+        if (falloff === 'exponential') progress = Math.pow(progress, 2);
+        if (falloff === 'gaussian') progress = Math.exp(-Math.pow(distance / (radius * 0.5), 2));
+
+        const currentSettings = [];
+        fromSettings.forEach((fromValue, key) => {
+          const toValue = toSettings.get(key) || fromValue;
+          const interpolatedValue = fromValue + (toValue - fromValue) * progress;
+          currentSettings.push(`'${key}' ${interpolatedValue}`);
+        });
+
+        return currentSettings.join(', ');
+      });
+
+      setInterpolatedSettings(newSettings);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [fromFontVariationSettings, toFontVariationSettings, radius, falloff]);
+
+  return (
+    <span
+      ref={containerRef}
+      className={`${className} variable-proximity-container`}
+      onClick={onClick}
+      style={{ display: 'inline-block', cursor: 'pointer' }}
+    >
+      {label.split('').map((letter, index) => (
+        <motion.span
+          key={index}
+          ref={(el) => (letterRefs.current[index] = el)}
+          style={{
+            display: 'inline-block',
+            fontVariationSettings: interpolatedSettings[index] || fromFontVariationSettings,
+            transition: 'font-variation-settings 0.1s ease',
+            minWidth: letter === ' ' ? '0.3em' : 'auto'
+          }}
+          aria-hidden="true"
+        >
+          {letter === ' ' ? '\u00A0' : letter}
+        </motion.span>
+      ))}
+      <span className="sr-only" style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', borderWidth: 0 }}>{label}</span>
+    </span>
+  );
+};
 
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,6 +133,13 @@ const NavBar = () => {
         }
     };
 
+    const proximityProps = {
+        radius: 200,
+        fromFontVariationSettings: "'wght' 400, 'opsz' 9",
+        toFontVariationSettings: "'wght' 1000, 'opsz' 40",
+        falloff: 'linear' 
+    }
+
     return (
         <>
             <header className={`header ${headerShadow ? 'shadow' : ''}`}>
@@ -50,14 +154,14 @@ const NavBar = () => {
                         </NavLink>
                         <nav className="nav">
                             <Link to="/about" className="nav-link">
-                                About
+                                <VariableProximity label="About" {...proximityProps} />
                             </Link>
                             <Link to="/gallery" className="nav-link">
-                                Gallery
+                                <VariableProximity label="Gallery" {...proximityProps} />
                             </Link>
                             {/* <Link to="/sponsors" className="nav-link">
-                                Sponsors
-                            </Link> */}
+                                <VariableProximity label="Sponsors" {...proximityProps} />
+                            </Link> */} 
                             <a
                                 href="#sponsors"
                                 className="nav-link"
@@ -65,8 +169,9 @@ const NavBar = () => {
                                     e.preventDefault();
                                     scrollToSection('sponsors');
                                 }}
+                                
                             >
-                                Sponsors
+                                <VariableProximity label="Sponsors" {...proximityProps} />
                             </a>
                             <a
                                 href="#contact"
@@ -76,7 +181,7 @@ const NavBar = () => {
                                     scrollToSection('contact');
                                 }}
                             >
-                                Contact Us
+                                <VariableProximity label="Contact Us" {...proximityProps} />
                             </a>
                             <div className="social-links">
                                 <a
