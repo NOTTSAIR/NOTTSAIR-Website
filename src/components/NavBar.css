@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-   
+    background: var(--header-background);
     backdrop-filter: blur(16px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: translateY(-100%);
@@ -86,10 +86,6 @@
    
 }
 
-
-
-
-
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -105,12 +101,19 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--bg-primary);
+    background: var(--header-background);
+    backdrop-filter: blur(16px);
     border-top: 1px solid var(--border-primary);
+    box-shadow: 0 25px 50px -12px var(--shadow);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mobile-menu.open {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .mobile-menu-item {

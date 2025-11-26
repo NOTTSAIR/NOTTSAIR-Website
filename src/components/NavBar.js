@@ -16,7 +16,8 @@ const NavBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setHeaderShadow(window.scrollY > 100);
+            setHeaderShadow(window.scrollY > 75);
+            setMobileMenuOpen(window.scrollY > 75 ? false: mobileMenuOpen);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -48,8 +49,6 @@ const NavBar = () => {
         toFontVariationSettings: "'wght' 1000, 'opsz' 40",
         falloff: 'linear' 
     }
-
-
 
     return (
         <>
