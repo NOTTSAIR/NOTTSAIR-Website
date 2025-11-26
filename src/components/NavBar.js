@@ -16,12 +16,15 @@ const NavBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setHeaderShadow(window.scrollY > 100);
+            setHeaderShadow(window.scrollY > 75);
+            setMobileMenuOpen(window.scrollY > 100 ? false: mobileMenuOpen);
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    
 
     const scrollToSection = (sectionId) => {
         setMobileMenuOpen(false);
@@ -127,7 +130,7 @@ const NavBar = () => {
                             </div>
                         </nav>
                         <button
-                            className="mobile-menu-btn"
+                            className="mobile-menu-btn" 
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         >
                             <svg

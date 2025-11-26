@@ -278,9 +278,7 @@
 }
 
 @media (max-width: 768px) {
-    .hero {
-        margin-top: 15%;
-    }
+    
     .gallery-grid {
         column-count: 2;
     }
