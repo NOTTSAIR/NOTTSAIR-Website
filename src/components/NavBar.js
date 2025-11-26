@@ -24,6 +24,8 @@ const NavBar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    
+
     const scrollToSection = (sectionId) => {
         setMobileMenuOpen(false);
         if (location.pathname !== '/') {
@@ -126,7 +128,7 @@ const NavBar = () => {
                             </div>
                         </nav>
                         <button
-                            className="mobile-menu-btn"
+                            className="mobile-menu-btn" 
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         >
                             <svg
