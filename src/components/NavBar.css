@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 .header {
     position: fixed;
@@ -6,13 +6,15 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: --header-background;
+    background: var(--header-background);
     backdrop-filter: blur(16px);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-100%);
 }
 
 .header.shadow {
     box-shadow: 0 25px 50px -12px var(--shadow);
+    transform: translateY(0);
 }
 
 .header-content {
@@ -31,7 +33,7 @@
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, var(--dark-red), var(--red)); /*not sure if i should change this*/
+    background: linear-gradient(90deg, var(--dark-red), var(--red)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -43,14 +45,20 @@
     gap: 32px;
 }
 
+
+
 .nav-link {
     text-decoration: none;
     color: var(--bg-secondary);
     transition: color 0.3s ease;
+    font-family: 'Roboto Flex', sans-serif; 
+    display: flex; 
+    align-items: center;
 }
 
+
 .nav-link:hover {
-    color: var(--color-secondary);
+    color: var(--dark-red);
 }
 
 .cta-button {
@@ -65,6 +73,16 @@
 
 .cta-button:hover {
     opacity: 0.9;
+}
+
+
+.social-links {
+    height: 40px;       
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+   
 }
 
 .mobile-menu-btn {
@@ -82,12 +100,19 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--bg-primary);
+    background: var(--header-background);
+    backdrop-filter: blur(16px);
     border-top: 1px solid var(--border-primary);
+    box-shadow: 0 25px 50px -12px var(--shadow);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mobile-menu.open {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .mobile-menu-item {
@@ -102,6 +127,7 @@
 .mobile-menu-item:hover {
     background-color: var(--mobile-hover);
 }
+
 
 @media (max-width: 768px) {
     .nav {
