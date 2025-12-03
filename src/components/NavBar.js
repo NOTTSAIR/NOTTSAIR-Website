@@ -1,12 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import VariableProximity from './VariableProximity.js'; // Import the component
-
-
-
 import './NavBar.css';
-
-
 
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
