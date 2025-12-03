@@ -86,7 +86,7 @@ const Hero = () => {
                         </p>
                         <div className="hero-buttons">
                             <a
-                                href="https://forms.cloud.microsoft/e/f6kEXKqdMF?origin=lprLink"
+                                href="https://forms.cloud.microsoft/e/XNgFvc472Y"
                                 className="hero-button primary"
                                 target="_blank"
                                 rel="noopener noreferrer"
