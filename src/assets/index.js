@@ -3,6 +3,7 @@ export { default as PerLeadImg } from './images/yahya-alkhosoussy.jpg';
 export { default as ColeadImg1 } from './images/tyler-channer.jpg';
 export { default as ColeadImg2 } from './images/persia-farzanehnia.jpg';
 export { default as WebLeadImg } from './images/prathu.jpg';
+export { default as BusinessLeadImg } from './images/kaylan.jpg';
 export { default as UoNSP } from './images/UoNLogo.png';
 export { default as cascade } from './images/uoncascadefund.png';
 export { default as perGif } from './images/perGif.gif';

@@ -163,6 +163,15 @@ const Hero = () => {
                         </div>
                         <div className="team-card">
                             <img
+                                src={assets.BusinessLeadImg}
+                                alt="Business Lead"
+                                className="team-photo"
+                            />
+                            <h3 className="team-name">Kaylan Chauhan</h3>
+                            <p className="team-role">Business Lead</p>
+                        </div>
+                        <div className="team-card">
+                            <img
                                 src="https://placehold.co/200x200/F5FBEF/0A192F?text=TBD"
                                 alt="Control Lead"
                                 className="team-photo"
@@ -178,15 +187,6 @@ const Hero = () => {
                             />
                             <h3 className="team-name">TBD</h3>
                             <p className="team-role">Path Planning Lead</p>
-                        </div>
-                        <div className="team-card">
-                            <img
-                                src="https://placehold.co/200x200/F5FBEF/0A192F?text=TBD"
-                                alt="Business Lead"
-                                className="team-photo"
-                            />
-                            <h3 className="team-name">TBD</h3>
-                            <p className="team-role">Business Lead</p>
                         </div>
                         <div className="team-card">
                             <img
