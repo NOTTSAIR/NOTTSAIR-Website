@@ -192,7 +192,7 @@
     opacity: 0.85;
     transition: opacity 0.3s ease;
     display: block;
-    box-shadow: 0 2px 8px black; 
+    box-shadow: 0 2px 8px black;
 }
 
 .sponsor-logo:hover {
@@ -278,7 +278,6 @@
 }
 
 @media (max-width: 768px) {
-    
     .gallery-grid {
         column-count: 2;
     }
